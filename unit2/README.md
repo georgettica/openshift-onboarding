@@ -63,4 +63,5 @@ Theoretically your context will be set to that new project but let's just be ext
 
 `oc project my-great-project`
 
-Now let's deploy our application
+Now let's deploy our application.
+`oc new-app my-great-app:quay.io/rira12621/openshift-onboarding:unit2`
