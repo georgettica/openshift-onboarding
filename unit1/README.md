@@ -32,3 +32,12 @@ Let's quickly go over what the command is doing in case it has been a while sinc
 * `build` is sending the context to the docker daemon and instructing it to build
 * `-t` is telling docker to tag the newly built image `mygreatgoapp:latest` where `mygreatgoapp` is the name of your image and `latest` tags this build as "latest"
 * `.` is the instruction in which directory to look for the Dockerfile which in this case is the current directory
+
+### Task 4
+Now that we have manually built the app as well as built the docker image, all that is left is to run it.
+
+Do so by executing `docker run --rm mygreatgoapp:latest`
+
+It will let you know if everything worked fine.
+
+In case you are wondering, the `--rm` flag is only to have docker clean up the container after it's done.
