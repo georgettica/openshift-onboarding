@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "OpenShift v4 Onboarding"
+theme = "hugo-theme-techdoc"

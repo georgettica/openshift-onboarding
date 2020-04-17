@@ -1,3 +1,9 @@
+---
+title: "Unit 2"
+date: 2020-04-17T15:17:00+02:00
+draft: true
+---
+
 # Unit 2
 
 ## What's happening in this unit?
@@ -29,7 +35,6 @@ If this is not the case and you are a customer, talk to your Sales contact to bu
 * Make yourself a nice cup of coffee or tea while the cluster is being set up
 
 To help you navigate through this a bit easier, there's a gif below showing the flow.
-
 
 
 ### Task 2
@@ -65,3 +70,4 @@ Theoretically your context will be set to that new project but let's just be ext
 
 Now let's deploy our application.
 `oc new-app my-great-app:quay.io/rira12621/openshift-onboarding:unit2`
+

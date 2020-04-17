@@ -13,4 +13,8 @@ Each unit comes with an example go application, the corresponding dockerfile to 
 * find place to host learning environment
 
 
-### Let's get started
+## Running the project
+We are make use of [Hugo][https://gohugo.io/] to simply run this.
+The Dockerfile in the repository root is used to build a Hugo docker image, that is build and hosted on [quay.io][https://quay.io/rira12621/hugo-docker]
+
+To run the website exectue `docker run --rm -ti --volume $PWD:/src quay.io/rira12621/hugo-docker:latest hugo`
