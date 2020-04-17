@@ -1,4 +1,6 @@
-# openshift-onboarding
+# OpenShift Onboarding
+
+[![Docker Repository on Quay](https://quay.io/repository/rira12621/openshift-onboarding-hugo/status "Docker Repository on Quay")](https://quay.io/repository/rira12621/openshift-onboarding-hugo)
 
 ## What this will do
 Through a couple of units this will take you through setting up an Openshift Dedicated Cluster, deploying an example application and instrumenting it.
