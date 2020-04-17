@@ -19,4 +19,6 @@ RUN mkdir -p /usr/local/src && \
 
 WORKDIR /src
 
+COPY . .
+
 EXPOSE 1313
