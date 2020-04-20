@@ -47,10 +47,10 @@ There are a variety of different ways this can be achieved, we will try to stay 
 as things like `oc create` don't exist there.
 
 Before you begin you should have `oc` set up already.
-You can download it from [here][https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/].
+You can download it from [here](https://mirror.openshift.com/pub/openshift-v4/clients/oc/latest/).
 
 In case you prefer to use a CLI to interact with OCM instead of the UI, you can also download the do so. Just get the command line client using `go get -u github.com/openshift-online/ocm-cli/cmd/ocm`.
-Afterwards get your offline token from [here][https://cloud.redhat.com/openshift/token] and then login using `ocm login --token $OFFLINE_TOKEN`.
+Afterwards get your offline token from [here](https://cloud.redhat.com/openshift/token) and then login using `ocm login --token $OFFLINE_TOKEN`.
 
 Now you will be able to use commands like `ocm cluster list`, `ocm cluster list --managed` or login like `ocm cluster login <cluster_id>`
 
