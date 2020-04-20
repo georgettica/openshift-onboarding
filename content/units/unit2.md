@@ -36,6 +36,7 @@ If this is not the case and you are a customer, talk to your Sales contact to bu
 
 To help you navigate through this a bit easier, there's a gif below showing the flow.
 
+![OCM Login](https://raw.githubusercontent.com/RiRa12621/openshift-onboarding/master/images/OCM-ui-login.gif)
 
 ### Task 2
 You will be deploying the code and docker image from this repository just that we have uploaded it to quay.io for you already.
