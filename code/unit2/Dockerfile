@@ -9,4 +9,5 @@ FROM alpine
 RUN mkdir /app
 WORKDIR /app
 COPY --from=builder /app/example .
+EXPOSE 8080
 CMD ["./example"]
