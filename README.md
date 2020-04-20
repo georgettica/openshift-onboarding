@@ -16,15 +16,15 @@ Each unit comes with an example go application, the corresponding dockerfile to 
 
 
 ## Running the project
-We are make use of [Hugo][https://gohugo.io/] to simply run this.
-The Dockerfile in the repository root is used to build a Hugo docker image, that is build and hosted on [quay.io][https://quay.io/rira12621/openshift-onboarding-hugo]
+We are make use of [Hugo](https://gohugo.io/) to simply run this.
+The Dockerfile in the repository root is used to build a Hugo docker image, that is build and hosted on [quay.io](https://quay.io/rira12621/openshift-onboarding-hugo)
 
-To run the website exectue `docker run --rm -ti --volume $PWD:/src quay.io/rira12621/hugo-docker:latest hugo`
+To run the website exectue `docker run --rm -p 1313:1313 -ti quay.io/rira12621/openshift-onboarding-hugo:latest`
 
 ## Adding more Units
 This is a living project, if you feel something is missing, please add it.
 Hugo is making this really easy.
-You can follow the the [Hugo documentation][https://gohugo.io/getting-started/] but the tl;dr is the folling command:
+You can follow the the [Hugo documentation](https://gohugo.io/getting-started/) but the tl;dr is the folling command:
 
 ```
 hugo new unit/<your unit>
