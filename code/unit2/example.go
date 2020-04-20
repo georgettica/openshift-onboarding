@@ -14,7 +14,7 @@ import (
 	"net/http"
 )
 
-// The main function of the package does not take any values in our return any
+// The main function of the package does not take any values in or return any
 func main() {
 	// A lot of this is adapted to what we need from the official golang documentation https://golang.org/doc/articles/wiki/
 
