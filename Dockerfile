@@ -21,7 +21,7 @@ WORKDIR /src
 
 COPY . .
 
-RUN hugo
+RUN hugo -D
 
 EXPOSE 1313
 
