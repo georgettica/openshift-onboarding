@@ -30,3 +30,5 @@ You can follow the the [Hugo documentation](https://gohugo.io/getting-started/) 
 hugo new unit/<your unit>
 ```
 Please stick to the template for units included in the root of this repository
+
+Also make sure to remove `draft: true` when you're ready to have it published.
