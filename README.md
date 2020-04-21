@@ -32,3 +32,12 @@ hugo new unit/<your unit>
 Please stick to the template for units included in the root of this repository
 
 Also make sure to remove `draft: true` when you're ready to have it published.
+
+Once you're happy with what you have run
+
+```
+hugo -t hugo-theme-techdoc -d deploy/public_html
+```
+to make sure your changes go live.
+
+The `deploy` folder the contains all html files needed and a super tiny Dockerfile, so it's easy to deploy anywhere.
