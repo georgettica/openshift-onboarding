@@ -1,7 +1,6 @@
 ---
 title: "Unit 2"
 date: 2020-04-17T15:17:00+02:00
-draft: true
 ---
 
 # Unit 2
