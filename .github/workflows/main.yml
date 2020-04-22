@@ -1,0 +1,29 @@
+name: CI
+on:
+  # Trigger the workflow on push to the master branch
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    # Run on Ubuntu Latest
+    runs-on: ubuntu-latest
+    steps:
+      # The RedHat action requires a checkout prior
+    - name: Checkout
+      uses: actions/checkout@v1
+      # Add some extra sleep to allow quay to finish the built before rollout
+    - name: Sleep
+      uses: "maddox/actions/sleep@master"
+      args: 60s
+      # Use an OpenShift action so you have `oc` available
+    - name: OpenShift Action
+      uses: redhat-developer/openshift-actions@v1.1
+      with:
+        version: 'latest'
+        # Make sure you have specified the secrets in the repo settings
+        openshift_server_url: ${{ secrets.OPENSHIFT_SERVER_URL }}
+        parameters: '{"apitoken": "${{ secrets.API_TOKEN }}", "acceptUntrustedCerts": "true"}'
+        cmd: |
+          'version'
+          'rollout latest openshift-onboarding-hugo -n rrackow-openshift-onboarding'
