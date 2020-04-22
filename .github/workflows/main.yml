@@ -19,11 +19,14 @@ jobs:
       # The RedHat action requires a checkout prior
     - name: Checkout
       uses: actions/checkout@v1
-      # Add some extra sleep to allow quay to finish the built before rollout
-    - name: Sleep
-      uses: "maddox/actions/sleep@master"
+      # Build and push container image
+    - name: Build image
+      uses: docker/build-push-action@v1
       with:
-        args: 60s
+        username: ${{ secrets.QUAY_USERNAME }}
+        password: ${{ secrets.QUAY_PASSWORD }}
+        repository: quay.io/rira12621/openshift-onboarding-hugo
+        tags: latest
       # Use an OpenShift action so you have `oc` available
     - name: OpenShift Action
       uses: redhat-developer/openshift-actions@v1.1
