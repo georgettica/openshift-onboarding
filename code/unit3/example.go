@@ -10,6 +10,7 @@ package main
 import (
 	// This time we are using some more packages
 	"fmt"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"log"
 	"net/http"
 )
@@ -27,6 +28,10 @@ func main() {
 	*/
 	// Call to http.HandleFunc, telling it to handle all requests to "/" using the "handler" function
 	http.HandleFunc("/", handler)
+
+	// Handle request to /metrics using the prom library
+	http.Handle("/metrics", promhttp.Handler())
+
 	// Log a fatal in case something goes wrong with the "Listen and Serve"
 	// Listen and serve is specified to listen on port 8080
 	log.Fatal(http.ListenAndServe(":8080", nil))

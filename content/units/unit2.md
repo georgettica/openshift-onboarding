@@ -4,8 +4,6 @@ date: 2020-04-17T15:17:00+02:00
 weight: 20
 ---
 
-# Unit 2
-
 ## What's happening in this unit?
 You will set up your own OpenShift dedicated cluster and deploy and example application to it
 
@@ -72,3 +70,5 @@ Theoretically your context will be set to that new project but let's just be ext
 Now let's deploy our application.
 `oc new-app my-great-app:quay.io/rira12621/openshift-onboarding:unit2`
 
+Last but not least, let's make sure our app is exposed so we can actually reach it from the internet.
+`oc expose svc my-great-app`

@@ -4,8 +4,6 @@ date: 2020-04-17T15:16:56+02:00
 weight: 10
 ---
 
-# Unit 1
-
 ## What's happening in this unit?
 The first unit mainly exists to get you familar with the format and style of this guide.
 
