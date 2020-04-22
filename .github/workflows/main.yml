@@ -5,7 +5,14 @@ on:
     branches:
       - master
 jobs:
-  build:
+  # Let's build the image and hope to be barely in sync with the quay trigger
+  docker_build:
+   runs-on: ubuntu-latest
+   steps:
+     - uses: actions/checkout@master
+     - name: Build Docker Image
+       run: docker build . 
+  deploy:
     # Run on Ubuntu Latest
     runs-on: ubuntu-latest
     steps:
