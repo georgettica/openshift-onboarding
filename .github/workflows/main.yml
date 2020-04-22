@@ -15,7 +15,8 @@ jobs:
       # Add some extra sleep to allow quay to finish the built before rollout
     - name: Sleep
       uses: "maddox/actions/sleep@master"
-      args: 60s
+      with:
+        args: 60s
       # Use an OpenShift action so you have `oc` available
     - name: OpenShift Action
       uses: redhat-developer/openshift-actions@v1.1
