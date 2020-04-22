@@ -32,6 +32,16 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
+      with:
+        submodules: true
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.69.0'
+
+    - name: Build
+      run: hugo -t hugo-theme-techdoc --minify -d deploy/public_html 
 
     # Setup gcloud CLI
     - uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
