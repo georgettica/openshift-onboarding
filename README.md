@@ -1,7 +1,8 @@
 # OpenShift Onboarding
 
 [![Docker Repository on Quay](https://quay.io/repository/rira12621/openshift-onboarding-hugo/status "Docker Repository on Quay")](https://quay.io/repository/rira12621/openshift-onboarding-hugo)
-![CI](https://github.com/RiRa12621/openshift-onboarding/workflows/CI/badge.svg?event=deployment)
+![Build and Deploy to Cloud Run](https://github.com/RiRa12621/openshift-onboarding/workflows/Build%20and%20Deploy%20to%20Cloud%20Run/badge.svg)
+
 
 ## What this will do
 Through a couple of units this will take you through setting up an Openshift Dedicated Cluster, deploying an example application and instrumenting it.
