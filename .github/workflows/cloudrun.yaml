@@ -40,7 +40,7 @@ jobs:
       with:
         hugo-version: '0.69.0'
 
-    - name: Build
+    - name: Build Content with Hugo
       run: hugo -t hugo-theme-techdoc --minify -d deploy/public_html 
 
     # Setup gcloud CLI
@@ -52,7 +52,7 @@ jobs:
         project_id: ${{ secrets.RUN_PROJECT }}
 
     # Build and push image to Google Container Registry
-    - name: Build
+    - name: Build Image
       run: |-
         cd deploy && \
         gcloud builds submit \
