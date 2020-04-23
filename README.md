@@ -36,3 +36,8 @@ Please stick to the template for units included in the root of this repository
 Also make sure to remove `draft: true` when you're ready to have it published.
 
 We have github actions set up for build and deployment once, your changes are merged to master.
+
+
+## Notes
+While this is intended for OpenShift dedicated Admins/Users, most of the Units can be done on OpenShift Container Platform as well, if you don't have access to a dedicated cluster.
+We are happy to extend this guide to cover OCP as well, PRs welcome.
