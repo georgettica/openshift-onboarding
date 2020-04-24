@@ -1,5 +1,6 @@
 ---
 title: "Unit 2"
+description: "Getting started with OpenShift Dedicated"
 date: 2020-04-17T15:17:00+02:00
 weight: 20
 ---

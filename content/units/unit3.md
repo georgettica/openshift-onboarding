@@ -1,6 +1,8 @@
 ---
-title: "Unit3"
+title: "Unit 3"
+description: "Starting to instrument"
 date: 2020-04-22T16:40:09+02:00
+weight: 30
 ---
 
 ## What's happening in this unit?
@@ -30,11 +32,22 @@ Feel free to change things and play around with it locally.
 
 ## Task 2
 This is just for you to understand where the various components are and how to find them
+Your OpenShift Cluster comes with the [Cluster Monitoring Operato](https://github.com/openshift/cluster-monitoring-operator) and that includes Prometheus, Alertmanager and Grafana/.
+Additionally there's some neat magic coming from [Prometheus Operator](https://github.com/coreos/prometheus-operator/) as well as [Kubernetest Mixins](https://github.com/kubernetes-monitoring/kubernetes-mixin)
 
+You can discover those either from the UI or by using the CLI. We'll be going the CLI way.
+All you need is the following command:
+
+```
+oc get route -n openshift-monitoring
+```
+
+This will show you the routes including the URLs to pull either of the Web UIs.
+Visit them and familiarize yourself with the UI a bit in case you've never used them.
 
 ## Task 3
 
-While every openshift cluster comes with a prometheus operator stack, that is only used to specifically observer and monitor the cluster components.
+While every OpenShift cluster comes with a prometheus operator stack, that is only used to specifically observer and monitor the cluster components.
 The `cluster-monitoring-operator` has some built in functionality that enables that.
 Workarounds for that exist but are temporary and should not be part of this guide.
 At the time of writing "User Workload Monitoring" has not yet landed on OpenShift so we will have to take a bit of a detour.
@@ -49,5 +62,3 @@ There's some more documentation on possible risks [here](https://docs.openshift.
 Let's move ahead, ignoring the risk.
 
 Lucky us, the monitoring team has written some really nice [documentation](https://docs.openshift.com/container-platform/4.3/monitoring/monitoring-your-own-services.html) that we're going base this task off.
-
-

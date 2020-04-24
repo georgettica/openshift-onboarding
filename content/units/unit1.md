@@ -1,5 +1,6 @@
 ---
 title: "Unit 1"
+description: "Getting started with go and docker"
 date: 2020-04-17T15:16:56+02:00
 weight: 10
 ---
