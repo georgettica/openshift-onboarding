@@ -12,9 +12,9 @@ In the future I will add some extra units to break your cluster to learn more ab
 Each unit comes with an example go application, the corresponding dockerfile to build it and instructions and what to do with it.
 
 ## TODO
-* add chaos monkey style unit
-* convert to lab environment
-* find place to host learning environment
+- [] add chaos monkey style unit
+- [] convert to lab environment
+- [] find place to host learning environment
 
 
 ## Running the project
