@@ -29,9 +29,5 @@ nohup.out
 # Hugo output
 public/
 resources/
-
-# Netlify Functions build output
-package-lock.json
-functions/
-node_modules/
+deploy/public_html/
 
