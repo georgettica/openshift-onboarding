@@ -11,7 +11,8 @@ You will start to instrument your application.
 
 ## Action Items
 * expose metrics basic metircs
-* access prometheus, grafana, alertmanger
+* access prometheus, grafana, alertmangera
+* enable user workload monitoring
 * access your applications metrics
 
 ### Task 1
@@ -62,3 +63,67 @@ There's some more documentation on possible risks [here](https://docs.openshift.
 Let's move ahead, ignoring the risk.
 
 Lucky us, the monitoring team has written some really nice [documentation](https://docs.openshift.com/container-platform/4.3/monitoring/monitoring-your-own-services.html) that we're going base this task off.
+
+It's pretty straight forward. All you need is to edit a configmap in the `openshift-monitoring` namespace, which you do as follows.
+
+Start to modify the configmap with the following command:
+`oc -n openshift-monitoring edit configmap cluster-monitoring-config`
+
+
+```
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-monitoring-config
+  namespace: openshift-monitoring
+data:
+  config.yaml: |
+    techPreviewUserWorkload:
+      enabled: true
+```
+
+The part that turns on the feature is `enabled: true`
+
+After you're done, you can run `oc get pods -n openshift-user-workload-monitoring` to check that the new prometheus pods have been created`
+
+
+## Task 4
+
+Now that we're all set and you know how to access the tools, as well as having enabled user workload monnitoring, we can start to scrape metrics from our service.
+
+Since under the hood, the cluster-monitoring-operator is basically [prometheus-operator](https://github.com/coreos/prometheus-operator/), it is absolutely worth to understand a bit of how that works
+but should not be covered here.
+
+We assume you understand the basics.
+
+What we need to do now is deploy our example app and a service.
+We can do both of that with the following command.
+
+`oc new-app my-instrumented-app:quay.io/rira12621/openshift-onboarding:unit3`
+
+Now we're ready to set up metrics collection from it.
+
+We will deploy the following ServiceMonitor for that in order to get our metrics.
+
+```
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  labels:
+    k8s-app: prometheus-example-monitor
+  name: prometheus-example-monitor
+  namespace: ns1
+spec:
+  endpoints:
+  - interval: 30s
+    port: 80-tcp
+    scheme: http
+  selector:
+    matchLabels:
+      app: openshift-onboarding
+```
+
+That's all we need.
+
+
+You can now see you scraped metrics from the console.
