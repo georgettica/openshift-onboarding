@@ -33,7 +33,7 @@ Feel free to change things and play around with it locally.
 
 ## Task 2
 This is just for you to understand where the various components are and how to find them
-Your OpenShift Cluster comes with the [Cluster Monitoring Operato](https://github.com/openshift/cluster-monitoring-operator) and that includes Prometheus, Alertmanager and Grafana/.
+Your OpenShift Cluster comes with the [Cluster Monitoring Operator](https://github.com/openshift/cluster-monitoring-operator) and that includes Prometheus, Alertmanager and Grafana/.
 Additionally there's some neat magic coming from [Prometheus Operator](https://github.com/coreos/prometheus-operator/) as well as [Kubernetest Mixins](https://github.com/kubernetes-monitoring/kubernetes-mixin)
 
 You can discover those either from the UI or by using the CLI. We'll be going the CLI way.
